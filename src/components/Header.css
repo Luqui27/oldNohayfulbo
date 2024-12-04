@@ -1,0 +1,101 @@
+/* src/components/Header.css */
+
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex; /* Asegura que los elementos dentro del navbar estén en la misma línea */
+    align-items: center; /* Centra verticalmente los elementos dentro del navbar */
+    box-sizing: border-box;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .navbar-logo {
+    font-size: 1.8em;
+    margin: 0;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto; /* Alinea el botón hamburguesa a la derecha */
+  }
+  
+  /* Estilos para el menú de navegación */
+  .navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-menu li {
+    margin-left: 20px;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .navbar-menu a:hover {
+    color: #f4f4f4;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: row; /* Asegura que el título y el botón hamburguesa estén en una línea */
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .navbar-menu li {
+      margin: 10px 0;
+      margin-left: 0;
+    }
+  
+    .navbar-menu a {
+      font-size: 1em;
+      display: block;
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
